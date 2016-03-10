@@ -8,7 +8,7 @@ $modx->setLogLevel(modX::LOG_LEVEL_INFO);
 $modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML');
 $sources = array(
     'model' => $modx->getOption('decred.core_path').'model/',
-    'schema_file' => $modx->getOption('decred.core_path').'model/decred/decred.mysql.schema.xml'
+    'schema_file' => $modx->getOption('decred.core_path').'model/schema/decred.mysql.schema.xml'
 );
 $manager= $modx->getManager();
 $generator= $manager->getGenerator();
