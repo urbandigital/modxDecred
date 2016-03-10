@@ -776,15 +776,4 @@ if($job == "ticketsperday"){
     echo '<pre>'.$commandjob.'</pre>';
 }
 
-
-
-
-
-
-
-
-
-
-
-
 return $output;
