@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="decred" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+        <object class="Blocks" table="blocks" extends="xPDOSimpleObject">
+                <field key="blocknr" dbtype="int" precision="20" phptype="integer" null="false" />
+                <field key="blocktime" dbtype="int" precision="15" phptype="integer" null="true" />
+                <field key="pool" dbtype="int" precision="2" phptype="integer" null="false" />
+                <field key="voters" dbtype="int" precision="2" phptype="integer" null="false" />
+                <field key="freshstake" dbtype="int" precision="3" phptype="integer" null="false" />
+                <field key="poolsize" dbtype="int" precision="20" phptype="integer" null="false" />
+                <field key="nethash" dbtype="text" phptype="string" null="true" />
+                <field key="rewarddev" dbtype="float" phptype="float" null="false" />
+                <field key="rewarddevaddress" dbtype="text" phptype="string" null="false" />
+                <field key="rewardwork" dbtype="float" phptype="float" null="false" />
+                <field key="rewardworkaddress" dbtype="text" phptype="string" null="false" />
+
+                <index alias="id" name="id" primary="false" unique="false" type="BTREE" >
+                        <column key="id" length="" collation="A" null="false" />
+                </index>
+        </object>
+</model>
