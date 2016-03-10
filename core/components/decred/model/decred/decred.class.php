@@ -19,8 +19,7 @@ class Decred {
             'assetsUrl' => $assetsUrl,
             'connectorUrl' => $assetsUrl.'connector.php',
         ),$config);
-
-
+        $this->modx->addPackage('decred',$this->config['modelPath']);
     }
 
 

@@ -12,7 +12,6 @@
                 <field key="rewarddevaddress" dbtype="text" phptype="string" null="false" />
                 <field key="rewardwork" dbtype="float" phptype="float" null="false" />
                 <field key="rewardworkaddress" dbtype="text" phptype="string" null="false" />
-
                 <index alias="id" name="id" primary="false" unique="false" type="BTREE" >
                         <column key="id" length="" collation="A" null="false" />
                 </index>

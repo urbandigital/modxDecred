@@ -1,7 +1,7 @@
 <?php
-$dcr = $modx->getService('decred','Decred',$modx->getOption('decred.core_path',null,$modx->getOption('core_path').'components/dcr/').'model/dcr/',$scriptProperties);
+$decred = $modx->getService('decred','Decred',$modx->getOption('decred.core_path',null,$modx->getOption('core_path').'components/dcr/').'model/dcr/',$scriptProperties);
 
-if (!($dcr instanceof Decred)) return '';
+if (!($decred instanceof Decred)) return '';
 
 /* setup default properties */
 $tpl = $modx->getOption('tpl',$scriptProperties,'rowTpl');
@@ -373,7 +373,7 @@ $hashrate = substr($hashrate, 0,6);
 $foundblockhash = $decredRpcDaemon->getblockhash($data['last_block']);
 $foundblock = $decredRpcDaemon->getblock($foundblockhash);
 $foundtime = date('g:i a',$foundblock['time']);
-$timeago = $dcr->timeAgo($foundblock['time']);
+$timeago = $decred->timeAgo($foundblock['time']);
 $network_hashrate = $data['network_hashrate'] / 1000000000;
 // GET MINED BLOCKS
 $path = MODX_CORE_PATH . 'components/decred/';
@@ -446,7 +446,7 @@ $hashrate = substr($hashrate, 0,6);
 $foundblockhash = $decredRpcDaemon->getblockhash($data['last_block']);
 $foundblock = $decredRpcDaemon->getblock($foundblockhash);
 $foundtime = date('g:i a',$foundblock['time']);
-$timeago = $dcr->timeAgo($foundblock['time']);
+$timeago = $decred->timeAgo($foundblock['time']);
 $network_hashrate = $data['network_hashrate'] / 1000000000;
 // GET MINED BLOCKS
 $path = MODX_CORE_PATH . 'components/decred/';
@@ -521,7 +521,7 @@ $lastblock = $data['decred']['lastbloc'];
 $foundblockhash = $decredRpcDaemon->getblockhash($data['decred']['lastbloc']);
 $foundblock = $decredRpcDaemon->getblock($foundblockhash);
 $foundtime = date('g:i a',$foundblock['time']);
-$timeago = $dcr->timeAgo($foundblock['time']);
+$timeago = $decred->timeAgo($foundblock['time']);
 
 
 // GET MINED BLOCKS
@@ -595,7 +595,7 @@ $hashrate = substr($hashrate, 0,6);
 $foundblockhash = $decredRpcDaemon->getblockhash($data['last_block']);
 $foundblock = $decredRpcDaemon->getblock($foundblockhash);
 $foundtime = date('g:i a',$foundblock['time']);
-$timeago = $dcr->timeAgo($foundblock['time']);
+$timeago = $decred->timeAgo($foundblock['time']);
 $network_hashrate = $data['network_hashrate'] / 1000000000;
 // GET MINED BLOCKS
 $path = MODX_CORE_PATH . 'components/decred/';
@@ -670,7 +670,7 @@ $lastblock = $data['decred']['lastbloc'];
 $foundblockhash = $decredRpcDaemon->getblockhash($data['decred']['lastbloc']);
 $foundblock = $decredRpcDaemon->getblock($foundblockhash);
 $foundtime = date('g:i a',$foundblock['time']);
-$timeago = $dcr->timeAgo($foundblock['time']);
+$timeago = $decred->timeAgo($foundblock['time']);
 
 // GET MINED BLOCKS
 $path = MODX_CORE_PATH . 'components/decred/';
